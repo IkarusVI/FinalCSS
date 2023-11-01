@@ -1,0 +1,181 @@
+@font-face {
+    font-family: Geist_Regular;
+    src: url(../fonts/GeistMono/GeistMono-Regular.otf);
+}
+@font-face {
+    font-family: Geist_Bold;
+    src: url(../fonts/GeistMono/GeistMono-Bold.otf);
+}
+@font-face {
+    font-family: Geist_Black;
+    src: url(../fonts/GeistMono/GeistMono-Black.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Geist_Black; 
+    text-decoration: none;
+    color: inherit;
+    scroll-behavior: smooth;
+}
+
+#section1{
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-flow: column;
+
+
+    background-image: url(../img/building.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    color: white;
+}
+
+#section1 img{
+    width: 50%;
+    max-width: 600px;
+}
+#section1 p{
+    margin-bottom: 100px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+#botton_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 8vh;
+}
+#botton_container #botton_next{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #0000009f;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00F3BD;
+
+}
+
+#section2{
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    gap: 100px;
+}
+
+#section2 #section2_tittle{
+    margin-top: 100px;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.738);
+}
+
+#section2 #employees{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+#section2 #employees .employee{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+
+
+#section2 #employees .employee img{
+    border-radius: 300px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+#section2 #employees #employee1 img{
+    transform: scaleX(-1);
+    object-position: 100%;
+}
+#section2 #employees #employee2 img{
+    object-position: 70%;
+}
+#section2 #employees #employee3 img{
+    object-position: 90%;
+}
+
+
+
+#section3{
+    min-height: 40vh;
+    background-image: url(../img/footer1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:0% 20%;
+    color: white;   
+
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+
+}
+
+#section3 #section3_t1{
+    font-size: 3em;
+    margin-top: 20px;
+}
+#section3 #section3_t2{
+    font-size: 2em;
+    margin-top: 20px;
+}
+#section3 #section3_t3{
+    font-size: 1em;
+    margin-top: 50px;
+    border: 1px solid white;
+    width: fit-content;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#section3 #section3_t3::before{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 150px;
+    background-color: rgba(106, 0, 255, 0.555);
+    transition: all 0.35s ease-in-out;
+    z-index: 200;
+    top: -40px;
+    left: -200%;
+    z-index: -1;
+}
+
+#section3 #section3_t3:hover::before{
+    left: 0;
+}
+
+#section3 #section3_t3:hover{
+    border: 1px solid rgba(255, 255, 255, 0.203);
+}
+
+@media screen and (max-width: 558px) {
+    #section3 #section3_t3{
+        font-size: 0.7em;
+    }
+
+}
